@@ -1,0 +1,10 @@
+services:
+    # Serviço da sua aplicação fastapi
+    app:
+        build: . # Constrói a imagem a partir do dockerfile da raiz do projeto
+        container_name: api # Nome do container
+        ports:
+            - "8000:8000" # Mapeia a porta 8000 do container para a porta 8000 do host
+        volumes:
+            - .:/app # Monta o diretório atual, onde está o código em /app dentro do container
+        
